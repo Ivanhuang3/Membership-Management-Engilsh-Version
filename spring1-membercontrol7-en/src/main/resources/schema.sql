@@ -1,0 +1,8 @@
+-- Create member table
+CREATE TABLE IF NOT EXISTS member (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  account VARCHAR(255) NOT NULL UNIQUE,
+  passwd VARCHAR(255) NOT NULL,
+  realname VARCHAR(255) NOT NULL,
+  icon BLOB
+); 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏢 Member Management System</h1>
+            <p>Simple member data management interface</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by account or name...">
+                <button onclick="searchMembers()">🔍 Search</button>
+                <button onclick="loadAllMembers()">📋 Show All</button>
+            </div>
+        </div>
+
+        <!-- Add/Edit Member Section -->
+        <div class="form-section">
+            <h2>➕ Add/Edit Member</h2>
+            <form id="memberForm">
+                <input type="hidden" id="memberId">
+                <div class="form-group">
+                    <label for="account">Account:</label>
+                    <input type="text" id="account" required>
+                </div>
+                <div class="form-group">
+                    <label for="passwd">Password:</label>
+                    <input type="password" id="passwd" required>
+                </div>
+                <div class="form-group">
+                    <label for="realname">Real Name:</label>
+                    <input type="text" id="realname" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn">💾 Add Member</button>
+                    <button type="button" onclick="resetForm()">🔄 Reset Form</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Member List Section -->
+        <div class="members-section">
+            <h2>👥 Member List</h2>
+            <div id="loadingMessage" class="loading">Loading...</div>
+            <div id="membersList" class="members-grid"></div>
+        </div>
+
+        <!-- Message Box -->
+        <div id="messageBox" class="message-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
